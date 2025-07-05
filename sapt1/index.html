@@ -67,6 +67,38 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#b-super-enchantment">B. Super-Enchantment</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#enunt_1">Enunț</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cerinta_1">Cerință</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#date-de-intrare_1">Date de intrare</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#date-de-iesire_1">Date de ieșire</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#restrictii-si-precizari_1">Restricții și precizări</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exemple_1">Exemple</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#c-sir-echilibrat">C. Șir Echilibrat</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#enunt_2">Enunț</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cerinta_2">Cerință</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#date-de-intrare_2">Date de intrare</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#date-de-iesire_2">Date de ieșire</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#restrictii-si-precizari_2">Restricții și precizări</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exemple_2">Exemple</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -114,30 +146,97 @@
 <li><span class="arithmatex">\(1 \leq n \leq 1.000.000.000\)</span></li>
 </ul>
 <h3 id="exemple">Exemple</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Intrare</strong></td>
-<td>10</td>
-<td>68</td>
-<td>67423</td>
-</tr>
-<tr>
-<td><strong>Iesire</strong></td>
-<td>ESTE POTENT</td>
-<td>NU ESTE POTENT</td>
-<td>NU ESTE POTENT</td>
-</tr>
-</tbody>
-</table>
+<p>Intrare</p>
+<pre><code>32
+</code></pre>
+<p>Iesire</p>
+<pre><code>ESTE POTENT
+</code></pre>
+<p>Intrare</p>
+<pre><code>23
+</code></pre>
+<p>Iesire</p>
+<pre><code>NU ESTE POTENT
+</code></pre>
+<p>Intrare</p>
+<pre><code>2362734
+</code></pre>
+<p>Iesire</p>
+<pre><code>NU ESTE POTENT
+</code></pre>
+<p>Rezolvarea poate fi consultata <a href="https://github.com/patrick-burasan24/meditatii/blob/main/numere_potente.cpp">aici</a>.</p>
+<h2 id="b-super-enchantment">B. Super-Enchantment</h2>
+<h3 id="enunt_1">Enunț</h3>
+<p>În jocul <em>CraftMine</em> un jucător dispune de o serie de obiecte, fiecare având o <strong>valoare specifică în funcție de utilitatea lor</strong>.</p>
+<p>În noua actualizare a jocului <em>CraftMine</em> s-a introdus abilitatea de a da <em>super-enchant</em> la iteme. Prin a da <em>super-enchant</em> la un obiect, înțelegem modificarea valorii acestuia în următorul fel: noua valoare se obține prin alipirea valorii inițiale cu oglinditul acesteia. Spre exemplu, dacă un obiect are valoarea inițială <code>1234</code>, atunci după ce îi dăm <em>super-enchant</em> noua valoare ce rezultă este <code>12344321</code>.</p>
+<p>Ștefan, un jucător pasionat, are de dat <em>super-enchant</em> la <span class="arithmatex">\(n\)</span> iteme cu diverse valori inițiale. Nefiind prea bun la informatică, vă cere vouă să proiectați un program pentru a determina valorile rezultate în urma <em>super-enchantării</em>.</p>
+<h3 id="cerinta_1">Cerință</h3>
+<p>Dându-se un număr natural <span class="arithmatex">\(n\)</span>, reprezentând numărul de obiecte, și apoi <span class="arithmatex">\(n\)</span> numere naturale, valorile inițiale ale obiectelor lui Ștefan, se cere să se afișeze pentru fiecare în parte valoarea rezultată după ce se aplică <em>super-enchantarea</em>.</p>
+<h3 id="date-de-intrare_1">Date de intrare</h3>
+<p>Pe prima linie se va citi de la tastatură un număr natural <span class="arithmatex">\(n\)</span>. Pe următoarele <span class="arithmatex">\(n\)</span> linii se află câte un singur număr natural.</p>
+<h3 id="date-de-iesire_1">Date de ieșire</h3>
+<p>Pentru fiecare dintre cele <span class="arithmatex">\(n\)</span> numere naturale se va afișa pe ecran valoarea rezultată în urma <em>super-enchantării</em>, pe linii distincte.</p>
+<h3 id="restrictii-si-precizari_1">Restricții și precizări</h3>
+<ul>
+<li><span class="arithmatex">\(1 \leq n \leq 100.000\)</span></li>
+<li>Toate valorile inițiale se regăsesc în intervalul <span class="arithmatex">\([1, 500.000]\)</span></li>
+</ul>
+<h3 id="exemple_1">Exemple</h3>
+<p>Intrare</p>
+<pre><code>5
+1234
+1
+120
+7562
+123456
+</code></pre>
+<p>Iesire</p>
+<pre><code>12344321
+11
+120021
+75622657
+123456654321
+</code></pre>
+<p>Rezolvarea poate fi consultata <a href="https://github.com/patrick-burasan24/meditatii/blob/main/super_enchantment.cpp">aici</a>.</p>
+<h2 id="c-sir-echilibrat">C. Șir Echilibrat</h2>
+<h3 id="enunt_2">Enunț</h3>
+<p>Considerăm șirul <span class="arithmatex">\(v\)</span> cu <span class="arithmatex">\(n\)</span> numere întregi. Spunem că <span class="arithmatex">\(v\)</span> este <em>echilibrat</em> dacă și numai dacă se respectă următoarea egalitate:
+$$ v[1] + v[n] = v[2] + v[n - 1] = \cdots = v[i] + v[n - i + 1], \ i \in \set{1, 2, \cdots, k} , \ \text{unde} \ k = \left\lfloor \dfrac{n}{2} \right\rfloor $$</p>
+<p>Unde notația <span class="arithmatex">\( \left\lfloor x \right\rfloor \)</span> reprezintă funcția <strong><a href="https://en.wikipedia.org/wiki/Floor_and_ceiling_functions">floor</a></strong> aplicată numărului real <span class="arithmatex">\(x\)</span>.</p>
+<h3 id="cerinta_2">Cerință</h3>
+<p>Dându-se un șir <strong>oarecare</strong> <span class="arithmatex">\(v\)</span> de numere întregi, să se determine dacă este sau nu <em>echilibrat</em>.</p>
+<h3 id="date-de-intrare_2">Date de intrare</h3>
+<p>Pe prima linie se va citi de la tastatură numărul natural <span class="arithmatex">\(n\)</span>, reprezentând numărul de elemente întregi ale șirului <span class="arithmatex">\(v\)</span>. Pe următoarea linie se vor citi în continuare cele <span class="arithmatex">\(n\)</span> numere întregi ale șirului, care sunt așezate în rand și care sunt despărțite printr-un singur spațiu.</p>
+<h3 id="date-de-iesire_2">Date de ieșire</h3>
+<p>Se va afișa pe ecran un mesaj corespunzător, mai exact <code>DA</code> dacă șirul furnizat este <em>echilibrat</em>, respectiv <code>NU</code> în caz contrar.</p>
+<h3 id="restrictii-si-precizari_2">Restricții și precizări</h3>
+<ul>
+<li><span class="arithmatex">\(2 \leq n \leq 100.000\)</span></li>
+<li><span class="arithmatex">\(-1.000.000.000 \leq v[i] \leq 1.000.000.000, \ \forall i \in [1,n]\)</span></li>
+</ul>
+<h3 id="exemple_2">Exemple</h3>
+<p>Intrare</p>
+<pre><code>8
+3 9 1 4 6 9 1 7
+</code></pre>
+<p>Iesire</p>
+<pre><code>DA
+</code></pre>
+<p>Intrare</p>
+<pre><code>9
+3 9 1 4 123321 6 9 1 7
+</code></pre>
+<p>Iesire</p>
+<pre><code>DA
+</code></pre>
+<p>Intrare</p>
+<pre><code>8
+3 9 1 4 6 9 1 8
+</code></pre>
+<p>Iesire</p>
+<pre><code>NU
+</code></pre>
+<p>Rezolvarea poate fi consultata <a href="https://github.com/patrick-burasan24/meditatii/blob/main/sir_echilibrat.cpp">aici</a>.</p>
               
             </div>
           </div><footer>
