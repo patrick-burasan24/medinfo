@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Interschimbarea a două numere - medinfo.ro</title>
+        <title>Săptămâna 3 - medinfo.ro</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
                                 <a href="../about/" class="nav-link">About</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cursuri</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cursuri</a>
                                 <ul class="dropdown-menu">
                                     
   <li class="dropdown-submenu">
@@ -63,7 +63,7 @@
 </li>
                                     
 <li>
-    <a href="../curs3/" class="dropdown-item">Săptămâna 3</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Săptămâna 3</a>
 </li>
                                 </ul>
                             </li>
@@ -75,6 +75,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../curs2/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                             <li class="nav-item dropdown">
                               <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
                                 <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
@@ -123,8 +133,16 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#interschimbarea-a-doua-numere" class="nav-link">Interschimbarea a două numere</a>
+            <li class="nav-item" data-bs-level="1"><a href="#saptamana-3" class="nav-link">Săptămâna 3</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#tema" class="nav-link">Temă</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#nota-autorului" class="nav-link">Nota autorului</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -132,9 +150,115 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="interschimbarea-a-doua-numere">Interschimbarea a două numere</h1>
-<p>Interschimbarea a două numere este unul din cei mai importanți algoritmi pe care îi înveți la informatică, având mare aplicabilitate în alți algoritmi (ex: marea majoritate a algoritmilor de sortare). Algoritmul presupune schimbarea valorilor a două numere între ele (evident).</p>
-<p>Cea mai simplă metodă (și cea mai <em>generală</em> de altfel) este <strong>regula celor trei pahare</strong> / interschimbarea folosind o variabilă auxiliară. Numele mai bizar provine de la o analogie sugestivă care ne ajută să înțelegem cum funcționează de fapt algoritmul.</p></div>
+<h1 id="saptamana-3">Săptămâna 3</h1>
+<p>Teoria legată de <strong>Metoda celor 3 pahare</strong> (interschimbarea cu ajutorul unei variabile auxiliare) poate fi accesată <a href="https://drive.google.com/file/d/1M041p3-7a7kovCZtYSzgNb8vB7XaIyIM/view?usp=sharing">aici</a>.</p>
+<p>Teoria despre instrucțiunile <code>if</code> și <code>switch</code> poate fi accesată <a href="https://drive.google.com/file/d/1jDiRBOzqMsk5V7yAwsGi60Q8pnMRmFZM/view?usp=sharing">aici</a>.</p>
+<h2 id="tema">Temă</h2>
+<p><em>Partea I:</em></p>
+<p>Citește de <a href="https://drive.google.com/file/d/1jDiRBOzqMsk5V7yAwsGi60Q8pnMRmFZM/view?usp=sharing">aici</a> despre instrucțiunile <code>if</code> și <code>switch</code>, apoi răspunde <strong>ÎN SCRIS</strong> la următoarele întrebări alegând răspunsul corect (A, B, C sau D). Justifică alegerea.</p>
+<p>1. Se consideră următoarea înșiruire de instrucțiuni în interiorul funcției <code>main</code>:</p>
+<pre><code class="language-c++">int val1, val2, val3;
+cin &gt;&gt; val1 &gt;&gt; val2;
+if (val1 &lt;= val2) val3 = val1;
+else val3 = val2;
+cout &lt;&lt; val3 &lt;&lt; '\n';
+</code></pre>
+<p>Dacă știm că toate biblotecile standard au fost incluse, atunci ce afișează variabila <code>val3</code>?</p>
+<ul>
+<li>A). Maximul dintre <code>val1</code> și <code>val2</code>; </li>
+<li>B). Minimul dintre <code>val1</code> și <code>val2</code>; </li>
+<li>C). Media aritmetică dintre <code>val1</code> și <code>val2</code>; </li>
+<li>D). Nu se afișează nimic pentru că se va produce o eroare de compilare.</li>
+</ul>
+<p>2. Se consideră următoarea înșiruire de instrucțiuni în interiorul funcției <code>main</code>:</p>
+<pre><code class="language-c++">int numar;
+cin &gt;&gt; numar;
+if (numar % 2 != 0)
+    cout &lt;&lt; &quot;Happy&quot;;
+else
+    cout &lt;&lt; &quot;Sad&quot;;
+</code></pre>
+<p>Dacă știm că toate biblotecile standard au fost incluse, atunci care dintre următoarele afirmații este <strong>adevărată</strong>?</p>
+<ul>
+<li>A.) Dacă pentru variabila <code>numar</code> se citește valoarea 0 atunci se va afișa <code>Happy</code>;</li>
+<li>B.) Niciodată nu se va putea afișa mesajul <code>Sad</code>;</li>
+<li>C.) Mesajul <code>Sad</code> va fi afișat dacă și numai dacă pentru variabila <code>numar</code> se citește o valoare impară;</li>
+<li>D.) Mesajul <code>Happy</code> va fi afișat dacă și numai dacă pentru variabila <code>numar</code> se citește o valoare impară. </li>
+</ul>
+<p>3. Se consideră următoarea înșiruire de instrucțiuni în interiorul funcției <code>main</code>:</p>
+<pre><code class="language-c++">int a, b, c;
+cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+int prajitura = (a + b + c) % 5;
+switch (prajitura) {
+    case 0: cout &lt;&lt; &quot;Placinta cu mere &quot;; break;
+    case 1: cout &lt;&lt; &quot;Tiramisu &quot;; break;
+    case 2: cout &lt;&lt; &quot;Lava cake &quot;;
+    case 3: cout &lt;&lt; &quot;Eclair cu ciocolata &quot;;
+    case 4: cout &lt;&lt; &quot;Amandina &quot;;
+}
+</code></pre>
+<p>Care dintre următoarele afirmații este <strong>adevărată</strong>?</p>
+<ul>
+<li>A.) Dacă se citesc, în această ordine, valorile <code>5 10 15</code>, atunci se va afișa mesajul <code>Placinta cu mere Tiramisu</code>;</li>
+<li>B.) Dacă se citesc, în această ordine, valorile <code>4 6 7</code>, atunci se va afișa mesajul <code>Lava cake Eclair cu ciocolata Amandina</code>;</li>
+<li>C.) Nu se va afișa nimic pentru că se va produce o eroare de compilare;</li>
+<li>D.) Dacă se citesc, în această ordine, valorile <code>5 10 15</code>, atunci se va afișa mesajul <code>Tiramisu</code>.</li>
+</ul>
+<p><em>Partea II</em>:</p>
+<p>Se propun următoarele probleme:</p>
+<h3 id="a-pereche-armonioasa">A. Pereche Armonioasă</h3>
+<h4 id="cerinta">Cerință</h4>
+<p>Fie <span class="arithmatex">\(x\)</span> și <span class="arithmatex">\(y\)</span> două numere naturale. Spunem că cele două formează o <strong>pereche armonioasă</strong> dacă și numai dacă suma lor rezultă într-un număr par.</p>
+<p>Dându-se cele două numere de la tastatură să se determine dacă formează sau nu o <strong>pereche armonioasă</strong>, afisându-se <code>"PERECHE ARMONIOASA"</code> dacă da sau <code>"FAIL"</code> în caz contrar.</p>
+<h4 id="restrictii-si-precizari">Restricții și precizări</h4>
+<ul>
+<li><span class="arithmatex">\(1 \leq x,y \leq 10^9\)</span></li>
+</ul>
+<h4 id="exemplu">Exemplu</h4>
+<p>Intrare:</p>
+<pre><code>10 20
+</code></pre>
+<p>Ieșire:</p>
+<pre><code>PERECHE ARMONIOASA
+</code></pre>
+<p>Intrare:</p>
+<pre><code>10 25
+</code></pre>
+<p>Ieșire:</p>
+<pre><code>FAIL
+</code></pre>
+<p>Soluția pentru această problemă poate fi accesată <a href="https://github.com/patrick-burasan24/meditatii/blob/main/pereche_armonioasa.cpp">aici</a>.</p>
+<h3 id="b-out-of-loop">B. Out of Loop</h3>
+<h4 id="cerinta_1">Cerință</h4>
+<p><em>Fermierul Ion</em> și <em>vaca Besi</em> au creat un joc nou pentru a nu se mai plictisi la fermă. Jocul se numește <em>Aut of lup</em> (en.: <em>Out of loop</em>) și constă în răspunderea cu <code>DA</code> și <code>NU</code> la întrebări de forma:</p>
+<blockquote>
+<p><em>Este adevărat că <span class="arithmatex">\(x\)</span> NU se află în intervalul închis <span class="arithmatex">\([y, z]\)</span></em>?</p>
+</blockquote>
+<p>Cum <em>fermierul Ion</em> are și alte treburi de făcut vă roagă pe voi să vă jucați o rundă cu vaca Besi și, dacă răspundeți corect, vă promite un <em>shake de iarbă proaspăt cosită™</em>.</p>
+<p>Citindu-se de la tastatură, în această ordine, cele trei numere naturale <span class="arithmatex">\(x,y,z\)</span> să se afișeze <code>DA</code> dacă <span class="arithmatex">\(x \notin [y,z]\)</span> sau <code>NU</code> în caz contrar.</p>
+<h4 id="restrictii-si-precizari_1">Restricții și precizări</h4>
+<ul>
+<li><span class="arithmatex">\(1 \leq x,y,z \leq 2 \cdot 10^9\)</span></li>
+<li><em>„Shake-ul de iarbă este o băutură foarte bună”</em> - vaca Besi cca. 2025</li>
+</ul>
+<h4 id="exemplu_1">Exemplu</h4>
+<p>Intrare:</p>
+<pre><code>20 10 30
+</code></pre>
+<p>Ieșire:</p>
+<pre><code>NU
+</code></pre>
+<p>Intrare:</p>
+<pre><code>20 30 50
+</code></pre>
+<p>Ieșire</p>
+<pre><code>DA
+</code></pre>
+<p>Soluția pentru această problemă poate fi accesată <a href="https://github.com/patrick-burasan24/meditatii/blob/main/out_of_loop.cpp">aici</a>.</p>
+<h2 id="nota-autorului">Nota autorului</h2>
+<p>Important de data aceasta este că toate problemele de la <em>Partea I</em> trebuie rezolvate pe hârtie și justificat <strong>DE CE</strong> și <strong>CUM</strong> ai ajuns la concluzia respectivă. </p>
+<p>La programe însă poți folosi ce vrei tu (fie hârtie, fie Word/Pages/Google Docs, fie un mediu de compilare preferat).</p>
+<p>A da și... absolut fără <s>ChatGPT</s></p></div>
             </div>
         </div>
 
