@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Teorie + Temă - medinfo.ro</title>
+        <title>Săptămâna 4 - medinfo.ro</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Teorie + Temă</a>
+    <a href="../curs1/" class="dropdown-item">Teorie + Temă</a>
 </li>
     </ul>
   </li>
@@ -67,7 +67,7 @@
 </li>
                                     
 <li>
-    <a href="../curs4/" class="dropdown-item">Săptămâna 4</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Săptămâna 4</a>
 </li>
                                 </ul>
                             </li>
@@ -80,12 +80,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../test1/" class="nav-link">
+                                <a rel="prev" href="../curs3/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../curs2/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -137,8 +137,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#tema" class="nav-link">Tema</a>
+            <li class="nav-item" data-bs-level="1"><a href="#saptamana-4" class="nav-link">Săptămâna 4</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#tema" class="nav-link">Temă</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -146,24 +150,104 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p>Uite <a href="https://drive.google.com/file/d/1P_PM3YElQZ8tL708cKUcBfOveTkcNmEe/view?usp=share_link">aici</a> un <em>mic</em> suport teoretic cu ceea ce am discutat azi! (plus câteva curiozități interesante despre limbajul C++, zic eu).</p>
+<h1 id="saptamana-4">Săptămâna 4</h1>
+<p>Soluția simplă pentru problema <a href="https://www.pbinfo.ro/probleme/106/minim3">minim3</a> poate fi accesată <a href="">aici</a>.</p>
+<p>Soluția cu funcția <code>std::min()</code> pentru problema <a href="https://www.pbinfo.ro/probleme/106/minim3">minim3</a> poate fi accesată <a href="">aici</a>.</p>
+<h2 id="tema">Temă</h2>
+<p>În continuare propunem următoarele probleme din saga <em>fermierului Ion</em>:</p>
+<h3 id="a-distance-to-barn">A. Distance to Barn</h3>
+<h4 id="cerinta">Cerință</h4>
+<p>Recent, fermierul Ion și-a cumpărat o nouă parcelă de pământ. Nerăbdător, vrea să înceapă deîndată construcția unui nou grajd pentru vacile sale. Din nefericire, vacile sale sunt mofturoase, iar dacă noul grajd depășește o anumită distanță <span class="arithmatex">\(d\)</span> de locul de păscut, atunci o să fie nemulțumite.</p>
+<p>Dacă este să considerăm întreg terenul fermierului Ion ca un sistem de axe <span class="arithmatex">\(xOy\)</span>, atunci noul grajd de va afla la coordonatele <span class="arithmatex">\((x_{grajd}, y_{grajd})\)</span>, iar pajiștea vacilor la <span class="arithmatex">\((x_{pajiște}, y_{pajiște})\)</span>.</p>
+<p>Fermierul Ion, nefiind prea strălucit la matematică, vă cere să determinați dacă vacile sale vor fi mulțumite de locația noului grajd.</p>
+<h4 id="date-de-intrare">Date de Intrare</h4>
+<p>Se vor citi de la tastatură două trei linii conținând coordonatele grajdului și pajiștii și distanța impusă de vaci. Pe prima linie se vor regăsi, separate printr-un unic spațiu, două numere reale <span class="arithmatex">\(x_{grajd}\)</span> și <span class="arithmatex">\(y_{grajd}\)</span>. Pe cea de-a doua linie se află, la fel ca mai sus, următoarele două numere reale <span class="arithmatex">\(x_{pajiște}\)</span>, respectiv <span class="arithmatex">\(y_{pajiște}\)</span>. Pe ultima linie se află un singur număr real <span class="arithmatex">\(d\)</span>, reprezentând distanța precizată mai sus.</p>
+<h4 id="date-de-iesire">Date de Ieșire</h4>
+<p>Se va afișa un mesaj corespunzător dacă distanța de la pajiște la grajd nu depășește distanța <span class="arithmatex">\(d\)</span> dorită de vacile fermierului Ion. Dacă totul este în regulă, atunci se va afișa mesajul <code>GOOD</code>, altfel se va afișa mesajul <code>VERY BAD</code>.</p>
+<h4 id="restrictii-si-precizari">Restricții și Precizări</h4>
+<ul>
+<li><span class="arithmatex">\(-1000 \leq x_{grajd}, x_{pajiște} \leq 1000\)</span></li>
+<li><span class="arithmatex">\(-1000 \leq y_{grajd}, y_{pajiște} \leq 1000\)</span></li>
+<li><span class="arithmatex">\(0 \leq d \leq 3000\)</span></li>
+<li>Se recomandă utilizarea tipului de date <code>double</code> pentru evitarea erorilor de aproximare</li>
+<li>Cunoaștem din matematică ca distanța <span class="arithmatex">\(D\)</span> dintre două puncte fixe <span class="arithmatex">\(A\)</span> și <span class="arithmatex">\(B\)</span>, având coordonatele <span class="arithmatex">\((x_A, y_A)\)</span> și <span class="arithmatex">\((x_B, y_B)\)</span> este <span class="arithmatex">\(D = \sqrt{ (x_B - x_A)^2 + (y_B - y_A)^2 }\)</span></li>
+</ul>
+<h4 id="exemplu">Exemplu</h4>
+<p>Intrare</p>
+<pre><code>4 8
+7 12
+25
+</code></pre>
+<p>Ieșire</p>
+<pre><code>GOOD
+</code></pre>
+<p>Intrare</p>
+<pre><code>4 8
+7 12
+20
+</code></pre>
+<p>Ieșire</p>
+<pre><code>BAD
+</code></pre>
+<h3 id="b-check-moo-ey-te">B. Check Moo-ey-te</h3>
+<h4 id="cerinta_1">Cerință</h4>
+<p>La fermă, vacile au găsit o nouă modalitate de a-și petrece timpul liber: pe o tablă standard de șah așază aleatoriu doi pioni de culori diferite și își pun problema dacă pionul alb îl poate captura pe cel negru. Vaca Besi pariind <strong>trei baloți întregi de fân</strong> (o întreagă avere la fermă) are nevoie de ajutorul vostru ca să răspundă <strong>corect</strong> în următoarea rundă a jocului.</p>
+<p>O tablă de șah este un caroiaj de <span class="arithmatex">\(8 \times 8\)</span> căsuțe ce alternează între culorile alb și negru. </p>
+<p>Numerotarea căsuțelor se realizează ca în imaginea de mai jos:</p>
+<p><img alt="Alt Text" src="../img/tabla_de_sah.png" /></p>
 <blockquote>
-<p><em>Poți ignora partea despre limbajul C</em></p>
+<p>Pionul alb se află pe <em>rândul 3</em>, <em>coloana 4</em>, iar pionul negru se află pe <em>rândul 7</em>, <em>coloana 6</em>.</p>
 </blockquote>
-<h2 id="tema">Tema</h2>
-<p>Până pe 12 uite aici câteva întrebari legate de ceea ce am făcut azi + niște probleme foarte asemanătoare cu cele rezolvate azi!</p>
+<p>Pionul din jocul propus respectă proprietățile din șah, putând să captureze o altă piesă numai pe cele două căsuțe din față, adiacente cu diagonala.</p>
+<h4 id="date-de-intrare_1">Date de Intrare</h4>
+<p>Se vor citi pe o singură linie patru numere naturale <span class="arithmatex">\(r_1, c_1, r_2, c_2\)</span>. Numerele <span class="arithmatex">\(r_1, c_1\)</span> reprezintă rândul și coloana pe care se regăsește pionul alb. În egală măsură, <span class="arithmatex">\(r_2, c_2\)</span> sunt rândul și coloana unde va fi pus pionul negru.</p>
+<h4 id="date-de-iesire_1">Date de Ieșire</h4>
+<p>Se va afișa un mesaj corespunzător în funcție de următoarele cazuri:</p>
 <ul>
-<li>Ce face linia de cod <code>#include &lt;nume_de_biblioteca&gt;</code>? Ce face linia de cod <code>#include &lt;iostream&gt;</code>?</li>
-<li>Care este funcția de care <strong>oricare</strong> program C++ are nevoie?</li>
-<li>Explică pe scurt structura generală a unui program C++.</li>
+<li><code>CHECK</code>, dacă pionul alb poate captura pionul negru</li>
+<li><code>LOSE</code>, dacă pionul alb nu poate captura pionul negru</li>
+<li><code>DRAW</code>, dacă cei doi pioni se află față în față</li>
 </ul>
-<p>În materie de probleme, uite câteva drăguțe de pe pbinfo!</p>
+<h4 id="restrictii-si-precizari_1">Restricții și Precizări</h4>
 <ul>
-<li>Problema <a href="https://www.pbinfo.ro/probleme/941/urare">Urare</a>;</li>
-<li>Problema <a href="https://www.pbinfo.ro/probleme/1258/scadere2">Scadere2</a>.</li>
+<li><span class="arithmatex">\(1 \leq r_1, r_2, c_1, c_2 \leq 8\)</span></li>
 </ul>
-<p>Poți să trimiți rezolvarile pe un fișier <code>.txt</code> pe care, mai apoi, să-l încarci pe grupul de WhatsApp.</p>
-<p><em>Spor!!!</em></p></div>
+<h4 id="exemplu_1">Exemplu</h4>
+<p>Intrare</p>
+<pre><code>3 4
+4 3
+</code></pre>
+<p>Ieșire</p>
+<pre><code>CHECK
+</code></pre>
+<p>Intrare</p>
+<pre><code>3 4
+4 5
+</code></pre>
+<p>Ieșire</p>
+<pre><code>CHECK
+</code></pre>
+<p>Intrare</p>
+<pre><code>3 4
+8 8
+</code></pre>
+<p>Ieșire</p>
+<pre><code>LOSE
+</code></pre>
+<p>Intrare</p>
+<pre><code>4 8
+5 8
+</code></pre>
+<p>Ieșire</p>
+<pre><code>DRAW
+</code></pre>
+<p>Intrare</p>
+<pre><code>4 8
+3 7
+</code></pre>
+<p>Ieșire </p>
+<pre><code>LOSE
+</code></pre></div>
             </div>
         </div>
 
