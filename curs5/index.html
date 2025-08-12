@@ -169,33 +169,117 @@
 <p>Rezolvarea pentru problema <em><a href="https://www.pbinfo.ro/probleme/452/cifimp">cifimp</a></em> poate fi accesată <a href="https://github.com/patrick-burasan24/meditatii/blob/main/cifimp.cpp">aici</a>.</p>
 <p>Rezolvarea pentru problema <em><a href="https://www.pbinfo.ro/probleme/4499/lazipp">LaziPP</a></em> poate fi accesată <a href="https://github.com/patrick-burasan24/meditatii/blob/main/lazipp.cpp">aici</a>.</p>
 <h2 id="notiuni-importante">Noțiuni importante</h2>
-<p>lorem ipsum</p>
+<p><strong>Paritatea unui număr</strong></p>
+<p>Pentru a verifica că un număr este par în C/C++ vom folosi operatorul <code>%</code> (restul împărțirii).</p>
+<p>Știm de la matematică că un număr par se împarte exact la 2. În alte cuvinte, un număr par este un număr care, la împărțirea cu 2, are restul 0 (altfel nu s-ar fi împărțit exact).</p>
+<p>Aplicând ceea ce am observat în cod, expresia pentru verificarea parității unui număr natural sau întreg este:</p>
+<pre><code class="language-c++">x % 2 == 0
+</code></pre>
+<p><strong>Observație!</strong> Pentru numerele reale nu se pune problema verificării parității pentru că operatorul <code>%</code> <strong>NU</strong> poate fi aplicat operanzilor reali. Prin urmare dacă avem de-a face cu un număr real, acesta trebuie convertit la un tip de date convenabil (<code>int</code>, <code>unsigned</code>, etc.) pentru a face verificarea.</p>
+<p><strong>Accesarea ultimei cifre a unui număr natural sau întreg</strong></p>
+<p>În continuare, prezentăm altă aplicație a operatorului modulo.</p>
+<p>Ca să accesăm ultima cifră a unui număr în C/C++ vom folosi expresia:</p>
+<pre><code class="language-c++">x % 10
+</code></pre>
+<p>Hai să luăm câteva exemple:</p>
+<ul>
+<li><span class="arithmatex">\(123 \% 10 = 3\)</span></li>
+<li><span class="arithmatex">\(987 \%10 = 7\)</span></li>
+<li><span class="arithmatex">\(6 \% 10 = 6\)</span></li>
+</ul>
+<p>Observăm că restul împărțirii prin <span class="arithmatex">\(10\)</span> a oricărui număr ne dă chiar ultima cifra a acestuia.</p>
+<p><strong>Ștergerea ultimei cifre a unui număr natural sau întreg</strong></p>
+<p>Ultima noțiune pe care o prezentăm este cum se șterge ultima cifra a unui număr (care mai poate fi numită ștergerea cifrei unităților sau ștergerea celei mai nesemnificative cifre a unui număr).</p>
+<p>Expresia pentru aceasta este:</p>
+<pre><code class="language-c++">x / 10
+</code></pre>
+<p>Adică <a href="https://ro.wikipedia.org/wiki/Parte_%C3%AEntreag%C4%83_%C8%99i_parte_frac%C8%9Bionar%C4%83">partea întreagă</a> a împărțirii numărului la <span class="arithmatex">\(10\)</span>. Cum functionează asta? Prima dată efectuăm, ca la mate, împărțirea la 10. Apoi, când aplicăm partea întreagă, pe noi ne interesează partea numărului de dinaintea virgulei. Dacă numărul se împarte exact la <span class="arithmatex">\(10\)</span> partea întreagă nu schimbă nimic. Hai să vedem niște exemple</p>
+<ul>
+<li><span class="arithmatex">\([\frac{123}{10}] = [12,3] = 12\)</span></li>
+<li><span class="arithmatex">\([\frac{987}{10}] = [98,7] = 98\)</span></li>
+<li><span class="arithmatex">\([\frac{100}{10}] = [10] = 10\)</span></li>
+</ul>
 <h2 id="tema">Temă</h2>
 <p><em>Partea I</em>:</p>
 <p>Drept temă propunem următoarele probleme:</p>
 <ul>
-<li>Problema <em><a href="https://www.pbinfo.ro/probleme/3063/luna">luna</a></em>.</li>
-<li>Problema <em><a href="https://www.pbinfo.ro/probleme/3063/luna">luna</a></em>.</li>
-<li>Problema <em><a href="https://www.pbinfo.ro/probleme/3063/luna">luna</a></em>.</li>
+<li>Problema <em><a href="https://www.pbinfo.ro/probleme/3063/luna">luna</a></em>. <a href="">Soluție</a></li>
+<li>Problema <em><a href="https://www.pbinfo.ro/probleme/9/maxmin">maxmin</a></em>. <a href="">Soluție</a></li>
+<li>Problema <em><a href="https://www.pbinfo.ro/probleme/3211/cumparaturi1">Cumparaturi1</a></em>. <a href="">Soluție</a></li>
+<li>Problema <em><a href="https://www.pbinfo.ro/probleme/3212/cumparaturi2">Cumparaturi2</a></em>. <a href="">Soluție</a></li>
 </ul>
 <p><em>Partea II</em>:</p>
 <p>Se consideră următoarele întrebări cu răspuns multiplu. Răspunsul este unic și există pentru toate întrebările, iar acesta consistă prin alegerea literei corespunzătoare afirmației corecte (A, B, C sau D).</p>
-<p>1. Lorem ipsum</p>
+<p>1. Se consideră următoarea expresie C/C++, unde variabilele <span class="arithmatex">\(x\)</span> și <span class="arithmatex">\(y\)</span> sunt declarate în prealabil și sunt numerele reale:</p>
+<pre><code class="language-c++">(x + 5) / y + 7
+</code></pre>
+<p>Care este expresia matematică echivalentă cu cea prezentată mai sus?</p>
+<ul>
+<li>A). <span class="arithmatex">\(\dfrac{x + 5}{y + 7}\)</span></li>
+<li>B). <span class="arithmatex">\(\dfrac{x + 5}{y} + 7\)</span></li>
+<li>C). <span class="arithmatex">\(x + \dfrac{5}{y + 7}\)</span></li>
+<li>D). <span class="arithmatex">\(x + \dfrac{5}{y} + 7\)</span></li>
+</ul>
+<p>2. Considerăm următoarea înșiruire de instrucțiuni:</p>
+<pre><code class="language-c++">int n, a, b, c;
+cin &gt;&gt; n;
+a = b = c = 0; // Initializare cu 0
+
+// Operatia 1
+a += n * (n + 1) / 2;
+
+// Operatia 2
+int i = 1;
+while (i &lt;= n) {
+    b += i;
+    i++;
+}
+
+// Operatia 3
+c += 55
+
+cout &lt;&lt; a &lt;&lt; ' ' &lt;&lt; b &lt;&lt; ' ' &lt;&lt; c &lt;&lt; '\n';
+</code></pre>
+<p>Care dintre următoarele afirmații este <strong>FALSĂ</strong>?</p>
+<ul>
+<li>A). Secvența de instrucțiuni calculează în variabilele întregi <span class="arithmatex">\(a\)</span> și <span class="arithmatex">\(b\)</span> suma primelor <span class="arithmatex">\(n\)</span> numere consecutive naturale;</li>
+<li>B). Dacă pentru variabila <span class="arithmatex">\(n\)</span> se citește valoarea <span class="arithmatex">\(10\)</span>, atunci, la finalul secvenței de instrucțiuni, se vor afișa trei valori identice, separate printr-un spațiu;</li>
+<li>C). Dacă pentru variabila <span class="arithmatex">\(n\)</span> se citește valoarea <span class="arithmatex">\(9\)</span>, atunci, la finalul secvenței de instrucțiuni, se vor afișa numerele <code>45 45 55</code>;</li>
+<li>D). Se vor produce exact două erori: una de sintaxă pentru că nu există operatorul <code>+=</code> și una la momentul compilării codului sursă.</li>
+</ul>
+<p>3. Vacile fermierului Ion au găsit pe pajiște un număr de exact <span class="arithmatex">\(5\)</span> cifre. În mitologia bovină se spune că dacă reușești să extragi cifra sutelor din număr, atunci vei avea parte de prosperitate și multe căpițe de fân. Dacă numărul găsit îl notăm <span class="arithmatex">\(n\)</span> și știm că este natural, atunci ce expresie C/C++ trebuie să folosească văcuțele ca să extragă cifra sutelor?</p>
+<ul>
+<li>A). <code>n / 10 % 10</code>;</li>
+<li>B). <code>n / 100 % 10</code>;</li>
+<li>C). <code>n / 10000</code>;</li>
+<li>D). <code>n % 10 / 100</code>.</li>
+</ul>
+<p>4. Vaca Besi a găsit depozitul unde fermierul Ion ascunde <em>L'Herbe</em> (iarbă deluxe). Problema, însă, este că ușa este închisă de un lacăt care se deschide dacă și numai dacă poți răspunde instantaneu la o întrebare de tipul:</p>
+<blockquote>
+<p><em>Este numărul <span class="arithmatex">\(x\)</span> divizibil cu <span class="arithmatex">\(3\)</span> sau numărul <span class="arithmatex">\((x + 1)\)</span> divizibil cu <span class="arithmatex">\(5\)</span>?</em></p>
+</blockquote>
+<p>Besi a scris tot programul C++, înafară de expresia indicată prin <code>...</code>:</p>
 <pre><code class="language-c++">#include &lt;iostream&gt;
 
 using namespace std;
 
-int main(int argc, char *argv[])
-{
-    cout &lt;&lt; &quot;Hello World!\n&quot;;
+int main() {
+    int x;
+    cin &gt;&gt; x;
+    if (...) // Expresia
+        cout &lt;&lt; &quot;CORECT&quot;;
+    else
+        cout &lt;&lt; &quot;GRESIT :(&quot;;
+    cout &lt;&lt; '\n';
     return 0;
 }
 </code></pre>
+<p>Care dintre următoarele expresii rezolvă corect întrebarea pusă de lacăt?</p>
 <ul>
-<li>A). Lorem Ipsum</li>
-<li>B). Lorem Ipsum</li>
-<li>C). Lorem Ipsum</li>
-<li>D). Lorem Ipsum</li>
+<li>A). <code>x % 3 == 0 &amp;&amp; (x + 1) % 5 == 0</code>;</li>
+<li>B). <code>x % 3 == 0 || x + 1 % 5 == 0</code>;</li>
+<li>C). <code>x % 3 == 0 || (x + 1) % 5 == 0</code>;</li>
+<li>D). <code>x % 3 == 0 &amp;&amp; x + 1 % 5 == 0</code>.</li>
 </ul></div>
             </div>
         </div>
